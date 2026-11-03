@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camwelorg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        /* header */
+        body {
+            background-color: rgb(157, 157, 236);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-left {
+            background-color: #8f8ff0;
+            color: rgb(51, 35, 35);
+            text-align: left;
+            font-size: 18px;
+            padding: 10px;
+            font-weight: bolder;
+            position: sticky;
+        }
+
+        .icon-right {
+            text-align: right;
+
+        }
+
+        .icon-right a i {
+            color: white;
+        }
+
+        /* navbar */
+        .navbar {
+            background-color: white;
+            margin: auto;
+            text-align: center
+        }
+
+        /* hero  */
+        .hero {
+            background-image: url(https://media.istockphoto.com/id/2161298305/photo/big-data-technology-background.jpg?s=1024x1024&w=is&k=20&c=biIaxDWhBtCOPwK2wcGNp20UJTIu_EMCU0DdoNu9sBk=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 60px 8%;
+        }
+
+        .contact-hero {
+            width: 50%;
+        }
+
+        .contact-hero h2 {
+            font-size: 42px;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .contact-hero p {
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .contact-btn,
+        .contact-btnn {
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .contact-btn {
+            background-color: white;
+            color: rgb(88, 134, 235);
+            border: 2px solid #ecd718;
+        }
+
+        .contact-btnn {
+            background-color: white;
+            color: #196ee6;
+            border: 2px solid #f1c917;
+        }
+
+        /* About */
+        .about {
+            background-color: #c5daf7;
+            display: flex;
+            height: 500px;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 60px 8%;
+        }
+
+        .content-about {
+            width: 55%;
+        }
+
+        .content-about h2 {
+            color: rgb(37, 37, 41);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content-about p {
+            font-size: 18px;
+            color: black;
+            margin-bottom: 15px;
+            text-align: justify;
+            list-style: 1.2px;
+
+        }
+
+        .about-img {
+            width: 50%;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* service */
+        .service {
+            padding: 50px 60px;
+            width: 100%;
+            background-color: rgb(104, 159, 223);
+        }
+
+        .card-container {
+            padding: 30px 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .feature-card {
+            width: 400px;
+            padding: 40px 60px;
+            height: 300px;
+            background-color: rgb(175, 201, 226);
+            border: 2px solid rgb(26, 4, 102);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+            transition: width 4s, height 3s, background-color 3s;
+            font-size: 17px;
+        }
+
+        .feature-card:hover {
+            background-color: rgb(30, 88, 212);
+            color: rgb(252, 247, 238);
+            transform: translateY(-5px);
+            width: 400px;
+            height: 300px;
+        }
+
+        /* main-service */
+        .microfinance-section {
+            width: 100%;
+            height: 500px;
+            background-color: #0e202c;
+            padding: 25px 20px;
+            overflow: hidden;
+        }
+
+        .microfinance-container {
+            max-width: 874px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+
+        }
+
+        /* Images */
+        .image-box {
+            width: 335px;
+            height: 260px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .image-box img {
+            position: absolute;
+            object-fit: cover;
+        }
+
+        .outer-img {
+            width: 232px;
+            height: 233px;
+            top: 0;
+            left: 0;
+        }
+
+        .inner-img {
+            width: 161px;
+            height: 161px;
+            bottom: 0;
+            right: 0;
+            border: 7px solid white;
+        }
+
+        /* Content */
+        .content-box {
+            flex: 1;
+        }
+
+        .content-box h2 {
+            color: white;
+            font-size: 27px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 22px;
+        }
+
+        .content-box p {
+            color: #ffffff;
+            font-size: 19px;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        /* Features */
+        .icon {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px 15px;
+        }
+
+        .icon div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .icon i {
+            width: 26px;
+            height: 26px;
+            min-width: 26px;
+            border-radius: 50%;
+            background-color: #1555c0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        /* paragraph service */
+        body {
+            background-image: url(https://plus.unsplash.com/premium_photo-1699475761787-6cf4aa05a47d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            height: 600px;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 100px;
+
+        }
+
+        .container h2 {
+            font-size: 30px;
+            font-weight: 900;
+            font-family: monospace;
+            color: rgb(4, 3, 68);
+            padding-bottom: 30px;
+        }
+
+        .container p {
+            font-size: 20px;
+            font-family: sans-serif;
+            color: rgb(11, 4, 110);
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="icon-left">
+            <div class="iconn-left">
+                <span class="info-item">
+                    <i class="fa fa-solid fo-phone"></i> +91 9572852742, +91 9028388889
+                </span>
+            </div>
+            <div class="icon-right">
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-comments"></i></a>
+            </div>
+        </div>
+        <!-- logo -->
+        <nav class="navbar"
+            style="background: rgb(235, 235, 240);display: flex;justify-content: space-between;align-items: center;">
+            <div class="logo" style="width: 15%;background-color: blue;padding: 20px;">
+                <a href="index.php"><img src="https://camwel.org/assets/images/logo/camwel_logo_white.png"
+                        alt="logo"></a>
+            </div>
+            <div class="" style="padding: 0px 15px;width: 40%;">
+                <a href="#" style="padding: 0px 15px;">Home</a>
+                <a href="#" style="padding: 0px 15px;">About us</a>
+                <a href="#" style="padding: 0px 15px;">Services</a>
+                <a href="#" style="padding: 0px 15px;">software feature</a>
+                <a href="#" style="padding: 0px 15px;">Demo</a>
+                <a href="#" style="padding: 0px 15px;">contact</a>
+            </div>
+            <div
+                style="display: flex;align-items: center;border: 5px solid rgb(207, 99, 36); background-color: blue;padding: 10px;box-shadow: inset gray;margin-right: 25px; border-radius: 20px;">
+                <button>submit</button>
+            </div>
+        </nav>
+    </header>
+    <!-- hero -->
+    <section class="hero">
+        <div class="contact-hero">
+            <h2>We provide one of the best microfinance software</h2>
+            <p>Time to leave hte outdated system behind and welcome the intellegent way of learning</p>
+            <button class="contact-btn">Call now for free Demo</button>
+            <button class="contact-btnn">Contact us</button>
+        </div>
+    </section>
+    <!-- about -->
+    <section class="about">
+        <div class="about-img">
+            <img src="https://camwel.org/assets/images/more/our_team.jpg" alt="camwel">
+        </div>
+        <div class="content-about">
+            <h2>WELCOME TO <span style="color: #0965e6;">CAMWEL SOLUTION</span></h2>
+            <p><span style="font-weight: bold;"> Camwel Solutions LLP</span> , a premier software development company,
+                is situated at <span style="font-weight: bold;">Janki Market, Bhagwat Nagar, Kumhrar, Patna 800026,
+                    Bihar, India.</span> With a focus on innovation, the company collaborates to transform financial
+                services by providing advanced software solutions designed for Microfinance operations. Camwel Solution
+                is committed to promoting saving habits and extending financial support to its members through legally
+                approved loans and deposits, leveraging state-of-the-art technology from Camwel Solutions.</p>
+            <p><span style="font-weight: bold;">Camwel Solutions LLP </span>provides advanced <span
+                    style="font-weight: bold;">software solutions</span> of all types. The software allows for the
+                management of an unlimited number of savings products, which can be associated with any type of
+                customer. Current accounts can be managed, with or without interest. Camwel Solutions LLP is committed
+                to developing effective and efficient money management software that supports Microfinance companies,
+                helping them serve people in villages and rural areas. The innovative design of the software is
+                flexible, user-friendly, and features a high level of automation.</p>
+        </div>
+
+    </section>
+    <!-- servive -->
+    <section class="service">
+        <div class="card-container">
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h3>Branch Management</h3>
+                <p>A branch manager is an employee responsible for overseeing the operations of a branch of a bank or
+                    financial
+                    institution.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-hospital-user"></i>
+                </div>
+                <h3>Product Management</h3>
+                <p>Product management in microfinance software helps manage
+                    different financial products efficiently.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h3>Loan Management</h3>
+                <p>Loan management helps businesses manage loan applications, approvals, payments and customer records.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <h3>Loan Disbursement</h3>
+                <p>Loan disbursement is the process of transferring the approved loan amount to the customer.</p>
+            </div>
+        </div>
+    </section>
+    <!-- main-service -->
+    <section class="microfinance-section">
+        <div class="microfinance-container">
+
+            <div class="image-box">
+                <img class="outer-img" src="https://camwel.org/assets/images/outer.jpg" alt="Camwel">
+                <img class="inner-img" src="https://camwel.org/assets/images/inner.jpg" alt="Camwel">
+            </div>
+
+            <div class="content-box">
+                <h2>Trusted by 100+ customers, our Microfinance Software</h2>
+
+                <p>
+                    Our Microfinance software is used in various locations, both locally and abroad.
+                    We offer the best Microfinance software solutions. Contact us today for a free demo.
+                    Our software allows you to enter more than a hundred fields of client information,
+                    and for credit products, you can add an unlimited number of products.
+                </p>
+
+                <div class="icon">
+                    <div><i class="bi bi-check-lg"></i> Multi-Branch Management</div>
+                    <div><i class="bi bi-check-lg"></i> Group Loan Management</div>
+                    <div><i class="bi bi-check-lg"></i> Civil & KYC Verification</div>
+                    <div><i class="bi bi-check-lg"></i> E-NACH Management</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- paragrapg-section -->
+    <div class="container">
+        <h2>MICROFINANCE SOFTWARE</h2>
+        <p>Camwel Solution is the best software provider in Patna, Pune, Bangalore, and abroad. We offer the most
+            advanced Microfinance software solutions. Contact us today for a free demo. Our software allows you to enter
+            more than a hundred fields of client information, and for credit products, you can add an unlimited number
+            of products. This software offers three types of interest calculations: Flat, Declining Balance - Equal
+            Monthly Installment (EMI), and Declining Balance - Equal Principal Installment.</p>
+        <p>We also provide all types of loans, including Banking, NBFC, Co-Operative, Billing, Personal Loan, Education
+            Loan, Home Loan, Property Loan, Agriculture Loan, Commercial Loan, Payday Loan, Microfinance, as well as
+            Website Design and Development. Additionally, we offer Website Design, Registration, Maintenance, and
+            Consultation services.</p>
+        <p>Our microfinance software has been instrumental in creating a highly useful product. It has streamlined and
+            enhanced the quality of our service, making it an excellent tool for expanding business operations.</p>
+        <p>Our company understands that business value cannot be achieved through technology alone. It starts with
+            people—experts working together to get to the heart of your individual business objectives and develop the
+            most tailored solutions to meet these requirements. We believe this human-centered approach to technology is
+            what makes the difference for your business.</p>
+    </div>
+</body>
+
+</html>

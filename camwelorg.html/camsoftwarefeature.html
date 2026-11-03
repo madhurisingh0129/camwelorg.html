@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero {
+            background-image: url(https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 60px 8%;
+        }
+
+        .comtent-hero {
+            width: 45%;
+        }
+
+        .content-hero h1 {
+            color: rgb(102, 10, 10);
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        .content-hero p {
+            font-size: 30px;
+            color: rgb(29, 28, 27);
+            margin-bottom: 15px;
+            text-align: justify;
+            list-style: 1.2px;
+        }
+
+        .microfinance {
+            padding: 50px 20px;
+        }
+
+        /* Left and right ko ek row mein lana */
+        .micro-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        /* Left side feature list */
+        .feature-list {
+            width: 35%;
+        }
+
+        .feature-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            background-color: #d9e4f3;
+            color: rgb(48, 47, 47);
+            width: 500px;
+            height: 50px;
+            border: 2px solid rgb(238, 190, 33);
+            font-size: 20px;
+            font-weight: 700;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .feature-list li:hover {
+            background-color: #1a64d3;
+            transform: translateX(5px);
+        }
+
+        .micro-content {
+            width: 65%;
+        }
+
+        .micro-content img {
+            width: 100%;
+            height: 300pxpx;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .micro-content h2 {
+            color: #0056D2;
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+
+        .micro-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- hero section -->
+    <section class="hero">
+        <div class="content-hero">
+            <h1>Software Features</h1>
+            <p>Microfinance software features include loan processing,
+                savings management, member tracking, EMI scheduling,
+                financial reporting, automated reminders, user-friendly
+                interface, and secure data handling.</p>
+        </div>
+    </section>
+    <!-- about -->
+    <section class="microfinance">
+        <div class="micro-container">
+            <div class="feature-list">
+                <ul>
+                    <li>Account management</li>
+                    <li>Multi branch management</li>
+                    <li>group Loan management</li>
+                    <li>Collection of officer management</li>
+                    <li>Loan processing management</li>
+                    <li>Loan disbursement management</li>
+                    <li>Loan Repayment management</li>
+                    <li>payout & commision management</li>
+                    <li>EOD/BOD</li>
+                    <li>Passbook and brand printing</li>
+                    <li>All report pirint(branch-wise)</li>
+                    <li>Fund management for branch</li>
+                </ul>
+            </div>
+            <div class="micro-content">
+                <img src="https://camwel.org/assets/images/software-features/feature.jpg" alt="microfinance">
+                <h2>Microfinance Software</h2>
+                <p><span style="color: black; font-weight: bold;">Camwel solutions</span> specializes in providing top-tier Microfinance software equipped with a
+                    comprehensive
+                    range of features, from basic to advanced, to meet the diverse needs of microfinance institutions.
+                    Our
+                    software is designed to streamline operations, enhance efficiency, and ensure seamless management of
+                    financial services.</p>
+                <p>In addition to the robust functionalities, Camwel Solutions takes pride in offering exceptional
+                    services
+                    delivered by our team of highly skilled experts. Our professionals ensure smooth implementation,
+                    provide
+                    ongoing support, and are dedicated to addressing your unique requirements.</p>
+                <p>With Camwel Solutions, you gain not only powerful software tailored to your microfinance operations
+                    but
+                    also the assurance of unparalleled customer service to help you achieve your business goals
+                    efficiently.
+                </p>
+                <p>Not only this, with Camwel Solutions Microfinance Software, you get access to a complete suite of
+                    features designed to cater to all your microfinance needs.</p>
+            </div>
+    </section>
+
+</body>
+
+</html>

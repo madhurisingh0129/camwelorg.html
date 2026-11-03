@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.microfinance-section {
+    width: 100%;
+    background-color: #0e202c;
+    padding: 25px 20px;
+    overflow: hidden;
+}
+
+.microfinance-container {
+    max-width: 874px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Images */
+.image-box {
+    width: 335px;
+    height: 260px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.image-box img {
+    position: absolute;
+    object-fit: cover;
+}
+
+.outer-img {
+    width: 232px;
+    height: 233px;
+    top: 0;
+    left: 0;
+}
+
+.inner-img {
+    width: 161px;
+    height: 161px;
+    bottom: 0;
+    right: 0;
+    border: 7px solid white;
+}
+
+/* Content */
+.content-box {
+    flex: 1;
+}
+
+.content-box h2 {
+    color: white;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.content-box p {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+/* Features */
+.icon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 15px;
+}
+
+.icon div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.icon i {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    border-radius: 50%;
+    background-color: #1555c0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .microfinance-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .image-box {
+        width: 100%;
+        max-width: 335px;
+    }
+
+    .content-box {
+        width: 100%;
+    }
+
+    .content-box h2 {
+        font-size: 24px;
+    }
+
+    .icon {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .icon div {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 400px) {
+    .icon {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="microfinance-section">
+    <div class="microfinance-container">
+
+        <div class="image-box">
+            <img class="outer-img" src="https://camwel.org/assets/images/outer.jpg" alt="Camwel">
+            <img class="inner-img" src="https://camwel.org/assets/images/inner.jpg" alt="Camwel">
+        </div>
+
+        <div class="content-box">
+            <h2>Trusted by 100+ customers, our Microfinance Software</h2>
+
+            <p>
+                Our Microfinance software is used in various locations, both locally and abroad.
+                We offer the best Microfinance software solutions. Contact us today for a free demo.
+                Our software allows you to enter more than a hundred fields of client information,
+                and for credit products, you can add an unlimited number of products.
+            </p>
+
+            <div class="icon">
+                <div><i class="bi bi-check-lg"></i> Multi-Branch Management</div>
+                <div><i class="bi bi-check-lg"></i> Group Loan Management</div>
+                <div><i class="bi bi-check-lg"></i> Civil & KYC Verification</div>
+                <div><i class="bi bi-check-lg"></i> E-NACH Management</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
