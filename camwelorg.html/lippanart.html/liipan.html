@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lippan</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf3;
+    color: #35251c;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span,
+footer span {
+    color: #c47a36;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #35251c;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #c47a36;
+}
+
+.nav-btn,
+.btn {
+    background-color: #9e572d;
+    color: white;
+    padding: 13px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 50px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.tagline {
+    color: #b16b34;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #b16b34;
+}
+
+.hero-content p:not(.tagline) {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 200px 200px 10px 10px;
+}
+
+/* About */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 90px 8%;
+    background-color: #f3e6d5;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-content p:not(.tagline) {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Gallery */
+
+.gallery {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 30px;
+}
+
+.gallery-card {
+    width: 33.33%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-card h3 {
+    margin: 15px 0 8px;
+}
+
+.gallery-card p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f3e6d5;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact p:not(.tagline) {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #35251c;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h2 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #ddd;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero,
+    .about {
+        flex-direction: column;
+        padding: 50px 6%;
+    }
+
+    .hero-content,
+    .hero-image,
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery-card {
+        width: 100%;
+    }
+
+    .section-heading h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lippan Art | Traditional Handmade Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Lippan<span>Art.</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#gallery" class="nav-btn">Explore Art</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">TRADITIONAL ART OF GUJARAT</p>
+            <h1>Bring Home The Beauty Of <span>Lippan Art</span></h1>
+            <p>
+                Discover the beauty of traditional handmade
+                mud and mirror art. Every design tells a story
+                of culture, creativity and tradition.
+            </p>
+            <a href="#gallery" class="btn">Explore Collection</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=700"
+                 alt="Traditional artwork">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=700"
+                 alt="Handmade art">
+        </div>
+
+        <div class="about-content">
+            <p class="tagline">ABOUT LIPPAN ART</p>
+            <h2>Art That Reflects Our Culture</h2>
+            <p>
+                Lippan Art is a traditional Indian art form
+                originating from the Kutch region of Gujarat.
+                It uses clay, mud and small mirrors to create
+                beautiful decorative patterns.
+            </p>
+            <p>
+                Each handmade creation brings a unique
+                combination of tradition and modern beauty.
+            </p>
+            <a href="#contact" class="btn">Know More</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-heading">
+            <p class="tagline">OUR COLLECTION</p>
+            <h2>Explore Our Beautiful Art</h2>
+            <p>Handcrafted designs made with love and creativity.</p>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500" alt="Art design">
+                <h3>Traditional Design</h3>
+                <p>Beautiful handmade artwork</p>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=500" alt="Decorative art">
+                <h3>Mirror Work Art</h3>
+                <p>Creative mirror decoration</p>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=500" alt="Wall art">
+                <h3>Modern Lippan</h3>
+                <p>Traditional art with modern touch</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <p class="tagline">GET IN TOUCH</p>
+        <h2>Let's Bring Art To Your Home</h2>
+        <p>Interested in our handmade Lippan Art collection?</p>
+        <a href="mailto:hello@example.com" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Lippan<span>Art.</span></h2>
+        <p>Preserving Tradition Through Art & Creativity.</p>
+        <p>© 2026 Lippan Art. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+</body>
+</html>
