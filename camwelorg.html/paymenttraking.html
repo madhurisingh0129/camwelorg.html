@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9e7fa;
+}
+
+/* Main Section */
+.repayment-section {
+    padding: 33px 0;
+}
+
+/* Blue Container */
+.repayment-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #174fba;
+    padding: 65px 70px;
+    border-radius: 4px;
+}
+
+/* Heading and Button */
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.top-content h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.demo-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #91b6ed;
+    padding: 12px 27px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Individual Box */
+.feature-box {
+    text-align: center;
+    color: white;
+}
+
+/* Icon Circle */
+.icon-circle {
+    width: 98px;
+    height: 98px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Icons */
+.icon-circle i {
+    color: white;
+    font-size: 42px;
+}
+
+/* Number Badge */
+.number {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: white;
+    color: #174fba;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Feature Heading */
+.feature-box h3 {
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .repayment-container {
+        padding: 40px 25px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 35px;
+    }
+
+    .top-content h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .top-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 10px;
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-circle i {
+        font-size: 32px;
+    }
+
+    .feature-box h3 {
+        font-size: 13px;
+        line-height: 22px;
+    }
+}
+
+     </style>
+</head>
+<body>
+    <section class="repayment-section">
+        <div class="repayment-container">
+            <div class="top-content">
+                <h2>PAYMENT TRAACKING</h2>
+                <button type="button" class="btn btn-success">request free Demo</button>
+            </div>
+            <div class="feature-grid">
+                <!-- box-1 -->
+                 <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fa-regular fa-comments"></i>
+                        <span class="number">9</span>
+                    </div>
+                    <h2>customer<br>management</h2>
+                 </div>
+
+                 <!--box-2-->
+                 <div class="feature-box">
+                    <div class="icon-circle">
+                         <i class="fa-solid fa-scale-balanced"></i>
+                         <span class="number">6</span>
+                    </div>
+                    <h2>customer<br>management</h2>
+                 </div>
+
+                 <!-- box-3 -->
+                  <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <span class="number">7</span>
+                    </div>
+                    <h2>Customer<br>Management</h2>
+                  </div>
+
+                  <!-- box-4 -->
+                   <div class="feature-box">
+                    <div class="icon-circle">
+                         <i class="fa-regular fa-thumbs-up"></i>
+                         <span class="number">3</span>
+                    </div>
+                    <h2>Integration<br>Capabilities</h2>
+                   </div>
+            </div>
+        </div>        
+    </section>
+</body>
+</html>

@@ -8,6 +8,84 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.loan-section {
+    width: 100%;
+    padding: 100px 30px;
+}
+
+.loan-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 55px;
+    row-gap: 35px;
+}
+
+.loan-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.loan-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+
+    border: 1px solid #222;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loan-icon i {
+    font-size: 21px;
+    color: #174b96;
+}
+
+.loan-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #727ac0;
+}
+
+.loan-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .loan-container {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .loan-section {
+        padding: 50px 20px;
+    }
+}
+
+    </style>
 </head>
 <body>
 <h1>Our Loans</h1>
