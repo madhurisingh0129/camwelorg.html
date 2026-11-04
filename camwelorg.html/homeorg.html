@@ -10,7 +10,7 @@
     <style>
         /* header */
         body {
-            background-color: rgb(157, 157, 236);
+            background-color: rgb(210, 210, 236);
             justify-content: center;
             align-items: center;
         }
@@ -267,14 +267,17 @@
         }
 
         /* paragraph service */
-        body {
+        .paragrapg-section {
             background-image: url(https://plus.unsplash.com/premium_photo-1699475761787-6cf4aa05a47d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D);
             background-size: cover;
             background-repeat: no-repeat;
+            width: 100%;
+            height: auto;
+            padding: 100px;
+           
         }
 
         .container {
-            height: 600px;
             text-align: center;
             align-items: center;
             justify-content: space-between;
@@ -295,6 +298,243 @@
             font-family: sans-serif;
             color: rgb(11, 4, 110);
             word-spacing: 10px;
+        }
+
+        /*page-icon section  */
+        .loan-section {
+            background-image: url(https://images.unsplash.com/photo-1707209856575-a80b9dff5524?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            padding: 100px 30px;
+            font-family: Arial, sans-serif;
+            margin: 40;
+            padding: 50;
+            box-sizing: border-box;
+        }
+
+        .loan-container {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 55px;
+            row-gap: 35px;
+        }
+
+        .loan-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .loan-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+
+            border: 1px solid #222;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loan-icon i {
+            font-size: 21px;
+            color: #174b96;
+        }
+
+        .loan-content h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #3a47bb;
+        }
+
+        .loan-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .loan-container {
+                grid-template-columns: 1fr;
+                row-gap: 30px;
+            }
+
+            .loan-section {
+                padding: 50px 20px;
+            }
+        }
+        /* payment-tracking section */
+        .repayment-section {
+           background-image: url(https://images.unsplash.com/photo-1657724258402-45fd58a57db7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            padding: 33px 0;
+            width: 100%;
+            min-height: 300px;
+            font-family: Arial, sans-serif;
+            background: #e9e7fa;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 190px 170px;
+        }
+
+        /* Blue Container */
+        .repayment-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #174fba;
+            padding: 65px 70px;
+            border-radius: 4px;
+        }
+
+        /* Heading and Button */
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+
+        .top-content button {
+            background-color: #0850b0;
+            border: 1px solid rgb(230, 230, 241);
+            font-weight: bold;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 2px;
+        }
+
+        .top-content button:hover {
+            background-color: black;
+            color: rgb(202, 216, 9);
+            cursor: auto;
+        }
+
+        .top-content h2 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .demo-btn {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: 1px solid #91b6ed;
+            padding: 12px 27px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        /* Individual Box */
+        .feature-box {
+            text-align: center;
+            color: white;
+        }
+
+        /* Icon Circle */
+        .icon-circle {
+            width: 98px;
+            height: 98px;
+            background: rgba(255, 255, 255, 0.10);
+            border-radius: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Icons */
+        .icon-circle i {
+            color: white;
+            font-size: 42px;
+        }
+
+        /* Number Badge */
+        .number {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            background: white;
+            color: #174fba;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        /* Feature Heading */
+        .feature-box h3 {
+            font-size: 16px;
+            line-height: 27px;
+            margin-top: 15px;
+            font-weight: 700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .repayment-container {
+                padding: 40px 25px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 35px;
+            }
+
+            .top-content h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .top-content {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 10px;
+            }
+
+            .icon-circle {
+                width: 80px;
+                height: 80px;
+            }
+
+            .icon-circle i {
+                font-size: 32px;
+            }
+
+            .feature-box h3 {
+                font-size: 13px;
+                line-height: 22px;
+            }
         }
     </style>
 </head>
@@ -437,25 +677,163 @@
 
         </div>
     </section>
+    <!-- payment-tracking section -->
+     <section class="repayment-section">
+        <div class="repayment-container">
+            <div class="top-content">
+                <h2>PAYMENT TRAACKING</h2>
+                <button type="button" class="btn btn-success">Request free Demo</button>
+            </div>
+            <div class="feature-grid">
+                <!-- box-1 -->
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fa-regular fa-comments"></i>
+                        <span class="number">9</span>
+                    </div>
+                    <h2>customer<br>management</h2>
+                </div>
+
+                <!--box-2-->
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <span class="number">6</span>
+                    </div>
+                    <h2>customer<br>management</h2>
+                </div>
+
+                <!-- box-3 -->
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <span class="number">7</span>
+                    </div>
+                    <h2>Customer<br>Management</h2>
+                </div>
+
+                <!-- box-4 -->
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <span class="number">3</span>
+                    </div>
+                    <h2>Integration<br>Capabilities</h2>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- paragrapg-section -->
-    <div class="container">
-        <h2>MICROFINANCE SOFTWARE</h2>
-        <p>Camwel Solution is the best software provider in Patna, Pune, Bangalore, and abroad. We offer the most
-            advanced Microfinance software solutions. Contact us today for a free demo. Our software allows you to enter
-            more than a hundred fields of client information, and for credit products, you can add an unlimited number
-            of products. This software offers three types of interest calculations: Flat, Declining Balance - Equal
-            Monthly Installment (EMI), and Declining Balance - Equal Principal Installment.</p>
-        <p>We also provide all types of loans, including Banking, NBFC, Co-Operative, Billing, Personal Loan, Education
-            Loan, Home Loan, Property Loan, Agriculture Loan, Commercial Loan, Payday Loan, Microfinance, as well as
-            Website Design and Development. Additionally, we offer Website Design, Registration, Maintenance, and
-            Consultation services.</p>
-        <p>Our microfinance software has been instrumental in creating a highly useful product. It has streamlined and
-            enhanced the quality of our service, making it an excellent tool for expanding business operations.</p>
-        <p>Our company understands that business value cannot be achieved through technology alone. It starts with
-            people—experts working together to get to the heart of your individual business objectives and develop the
-            most tailored solutions to meet these requirements. We believe this human-centered approach to technology is
-            what makes the difference for your business.</p>
-    </div>
+    <section class="paragrapg-section">
+        <div class="container">
+            <h2>MICROFINANCE SOFTWARE</h2>
+            <p>Camwel Solution is the best software provider in Patna, Pune, Bangalore, and abroad. We offer the most
+                advanced Microfinance software solutions. Contact us today for a free demo. Our software allows you to
+                enter
+                more than a hundred fields of client information, and for credit products, you can add an unlimited
+                number
+                of products. This software offers three types of interest calculations: Flat, Declining Balance - Equal
+                Monthly Installment (EMI), and Declining Balance - Equal Principal Installment.</p>
+            <p>We also provide all types of loans, including Banking, NBFC, Co-Operative, Billing, Personal Loan,
+                Education
+                Loan, Home Loan, Property Loan, Agriculture Loan, Commercial Loan, Payday Loan, Microfinance, as well as
+                Website Design and Development. Additionally, we offer Website Design, Registration, Maintenance, and
+                Consultation services.</p>
+            <p>Our microfinance software has been instrumental in creating a highly useful product. It has streamlined
+                and
+                enhanced the quality of our service, making it an excellent tool for expanding business operations.</p>
+            <p>Our company understands that business value cannot be achieved through technology alone. It starts with
+                people—experts working together to get to the heart of your individual business objectives and develop
+                the
+                most tailored solutions to meet these requirements. We believe this human-centered approach to
+                technology is
+                what makes the difference for your business.</p>
+        </div>
+        <!-- Loan-section -->
+    </section>
+    <section class="loan-section">
+        <div class="loan-container">
+
+            <!-- grouploan -->
+            <div class="loan-item">
+                <div class="loan-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="loan-content">
+                    <h2>GROUP LOAN</h2>
+                    <p>A small loan provided to individuals or groups in low-income communities, often used to fund
+                        small businesses or personal projects. Microfinance institutions typically offer these loans to
+                        underserved populations.</p>
+                </div>
+            </div>
+
+            <!-- CO-OPERATIVE LOAN -->
+            <div class="loan-item">
+                <div class="loan-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <div class="loan-content">
+                    <h2>CO-OPERATIVE LOAN</h2>
+                    <p>
+                        A loan provided by a cooperative society to its members,
+                        often at favorable interest rates for various purposes
+                        like agriculture, business, or personal needs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- NBFC LOAN -->
+            <div class="loan-item">
+                <div class="loan-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="loan-content">
+                    <h2>NBFC LOAN</h2>
+                    <p>Loans provided by non-banking financial companies (NBFCs), which can be used for a variety of
+                        purposes, such as personal loans, business loans, or vehicle loans.</p>
+                </div>
+            </div>
+
+
+            <!-- SECURED LOAN -->
+            <div class="loan-item">
+                <div class="loan-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div class="loan-content">
+                    <h2>SECURED LOAN</h2>
+                    <p>A loan that requires the borrower to pledge an asset (such as a car or property) as collateral
+                        for the loan.</p>
+                </div>
+            </div>
+
+            <!-- PEER-TO-PEER LOAN -->
+            <div class="loan-item">
+                <div class="loan-icon">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                </div>
+                <div class="loan-content">
+                    <h2>PEER-TO-PEER LOAN</h2>
+                    <p>A loan that is facilitated by a peer-to-peer lending platform, where individuals can lend money
+                        directly to other individuals or businesses, bypassing traditional banks.</p>
+                </div>
+            </div>
+
+
+            <!-- BRIDGE LOAN -->
+            <div class="loan-item">
+                <div class="loan-icon">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div class="loan-content">
+                    <h2>BRIDGE LOAN</h2>
+                    <p>A short-term loan used to “bridge” the gap between a current need for capital and the
+                        availability of longer-term financing or funding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

@@ -1,209 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-     <style>
-        
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+    
 
-body {
-    font-family: Arial, sans-serif;
-    background: #e9e7fa;
-}
+        /* Main Section */
+        .repayment-section {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            padding: 33px 0;
+            width: 100%;
+            min-height: 300px;
+            font-family: Arial, sans-serif;
+            background: #e9e7fa;
+            background-image: url(https://plus.unsplash.com/premium_photo-1701591581786-2ac167885a05?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 190px 170px;
+        }
 
-/* Main Section */
-.repayment-section {
-    padding: 33px 0;
-}
+        /* Blue Container */
+        .repayment-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #174fba;
+            padding: 65px 70px;
+            border-radius: 4px;
+        }
 
-/* Blue Container */
-.repayment-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    background-color: #174fba;
-    padding: 65px 70px;
-    border-radius: 4px;
-}
+        /* Heading and Button */
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 45px;
+        }
 
-/* Heading and Button */
-.top-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 45px;
-}
+        .top-content button {
+            background-color: #0850b0;
+            border: 1px solid rgb(230, 230, 241);
+            font-weight: bold;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 2px;
+        }
 
-.top-content h2 {
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-}
+        .top-content button:hover {
+            background-color: black;
+            color: rgb(202, 216, 9);
+            cursor: auto;
+        }
 
-.demo-btn {
-    color: white;
-    text-decoration: none;
-    border: 1px solid #91b6ed;
-    padding: 12px 27px;
-    border-radius: 4px;
-    font-size: 13px;
-}
+        .top-content h2 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
 
-/* Feature Grid */
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
+        .demo-btn {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: 1px solid #91b6ed;
+            padding: 12px 27px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
 
-/* Individual Box */
-.feature-box {
-    text-align: center;
-    color: white;
-}
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
 
-/* Icon Circle */
-.icon-circle {
-    width: 98px;
-    height: 98px;
-    background: rgba(255, 255, 255, 0.10);
-    border-radius: 50%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
+        /* Individual Box */
+        .feature-box {
+            text-align: center;
+            color: white;
+        }
 
-/* Icons */
-.icon-circle i {
-    color: white;
-    font-size: 42px;
-}
+        /* Icon Circle */
+        .icon-circle {
+            width: 98px;
+            height: 98px;
+            background: rgba(255, 255, 255, 0.10);
+            border-radius: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
 
-/* Number Badge */
-.number {
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    background: white;
-    color: #174fba;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-}
+        /* Icons */
+        .icon-circle i {
+            color: white;
+            font-size: 42px;
+        }
 
-/* Feature Heading */
-.feature-box h3 {
-    font-size: 16px;
-    line-height: 27px;
-    margin-top: 15px;
-    font-weight: 700;
-}
+        /* Number Badge */
+        .number {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            background: white;
+            color: #174fba;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+        /* Feature Heading */
+        .feature-box h3 {
+            font-size: 16px;
+            line-height: 27px;
+            margin-top: 15px;
+            font-weight: 700;
+        }
 
-    .repayment-container {
-        padding: 40px 25px;
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
 
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 35px;
-    }
+            .repayment-container {
+                padding: 40px 25px;
+            }
 
-    .top-content h2 {
-        font-size: 22px;
-    }
-}
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 35px;
+            }
 
-@media (max-width: 480px) {
+            .top-content h2 {
+                font-size: 22px;
+            }
+        }
 
-    .top-content {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
+        @media (max-width: 480px) {
 
-    .feature-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 10px;
-    }
+            .top-content {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
 
-    .icon-circle {
-        width: 80px;
-        height: 80px;
-    }
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 10px;
+            }
 
-    .icon-circle i {
-        font-size: 32px;
-    }
+            .icon-circle {
+                width: 80px;
+                height: 80px;
+            }
 
-    .feature-box h3 {
-        font-size: 13px;
-        line-height: 22px;
-    }
-}
+            .icon-circle i {
+                font-size: 32px;
+            }
 
-     </style>
+            .feature-box h3 {
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <section class="repayment-section">
         <div class="repayment-container">
             <div class="top-content">
                 <h2>PAYMENT TRAACKING</h2>
-                <button type="button" class="btn btn-success">request free Demo</button>
+                <button type="button" class="btn btn-success">Request free Demo</button>
             </div>
             <div class="feature-grid">
                 <!-- box-1 -->
-                 <div class="feature-box">
+                <div class="feature-box">
                     <div class="icon-circle">
                         <i class="fa-regular fa-comments"></i>
                         <span class="number">9</span>
                     </div>
                     <h2>customer<br>management</h2>
-                 </div>
+                </div>
 
-                 <!--box-2-->
-                 <div class="feature-box">
+                <!--box-2-->
+                <div class="feature-box">
                     <div class="icon-circle">
-                         <i class="fa-solid fa-scale-balanced"></i>
-                         <span class="number">6</span>
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <span class="number">6</span>
                     </div>
                     <h2>customer<br>management</h2>
-                 </div>
+                </div>
 
-                 <!-- box-3 -->
-                  <div class="feature-box">
+                <!-- box-3 -->
+                <div class="feature-box">
                     <div class="icon-circle">
                         <i class="fa-regular fa-thumbs-up"></i>
                         <span class="number">7</span>
                     </div>
                     <h2>Customer<br>Management</h2>
-                  </div>
+                </div>
 
-                  <!-- box-4 -->
-                   <div class="feature-box">
+                <!-- box-4 -->
+                <div class="feature-box">
                     <div class="icon-circle">
-                         <i class="fa-regular fa-thumbs-up"></i>
-                         <span class="number">3</span>
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <span class="number">3</span>
                     </div>
                     <h2>Integration<br>Capabilities</h2>
-                   </div>
+                </div>
             </div>
-        </div>        
+        </div>
     </section>
 </body>
+
 </html>
