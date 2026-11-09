@@ -1,55 +1,499 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table {
-            border-collapse: 1;
-            border: none;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Bill Invoice</title>
 
-        th,
-        td {
-            border: none;
-            padding: 10px 15px;
-            text-align: left;
-        }
-    </style>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    color: #111;
+}
+
+.invoice {
+    width: 820px;
+    min-height: 1180px;
+    margin: auto;
+    background: white;
+    border: 1px solid #777;
+}
+
+/* Top Header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: #eef0e2;
+    border-bottom: 1px solid #777;
+    font-size: 14px;
+}
+
+.top-header h3 {
+    font-size: 18px;
+}
+
+/* Company Details */
+.company-section {
+    display: flex;
+    min-height: 145px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #777;
+}
+
+.company-info {
+    width: 84%;
+    padding: 7px;
+}
+
+.company-info h2 {
+    font-size: 21px;
+    margin-bottom: 17px;
+}
+
+.company-info p {
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.logo {
+    width: 16%;
+    border-left: 1px solid #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Invoice Details */
+.invoice-details {
+    background: #dfe5f0;
+    padding: 6px;
+    border-bottom: 1px solid #777;
+}
+
+.detail-row {
+    display: flex;
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.detail-row strong {
+    width: 310px;
+}
+
+/* Billing and Shipping */
+.billing {
+    background: #f1dddd;
+}
+
+.shipping {
+    background: #f9d7b8;
+}
+
+.info-section {
+    padding: 6px;
+    border-bottom: 1px solid #777;
+    font-size: 14px;
+    min-height: 85px;
+}
+
+.info-section h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.info-section p {
+    margin: 2px 0;
+}
+
+/* Product Table */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #777;
+    padding: 8px 4px;
+    text-align: center;
+}
+
+.product-table th {
+    font-size: 14px;
+    height: 35px;
+    white-space: nowrap;
+}
+
+.product-table td {
+    height: 34px;
+}
+
+.product-table .description {
+    width: 29%;
+}
+
+.product-table .blank-row td {
+    height: 200px;
+}
+
+/* Rounded Off */
+.round-off {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #777;
+    font-size: 14px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    background: #b9e4e9;
+    padding: 5px 10px;
+    font-size: 17px;
+    border-bottom: 1px solid #777;
+}
+
+.amount-words {
+    background: #f4bd91;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #777;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    min-height: 270px;
+}
+
+.terms {
+    width: 33%;
+    padding: 7px;
+    border-right: 1px solid #777;
+}
+
+.terms h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.terms p {
+    margin: 5px 0;
+}
+
+.payment {
+    width: 33%;
+    padding: 30px 5px;
+    border-right: 1px solid #777;
+}
+
+.qr-code {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.upi {
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+.pay-details {
+    width: 34%;
+    padding: 25px 5px;
+    position: relative;
+    font-size: 15px;
+}
+
+.signature {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+/* Print */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .invoice {
+        width: 100%;
+        margin: 0;
+        border: 1px solid #777;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 10mm;
+    }
+}
+</style>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <th>S.No</th>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Rate</th>
-            <th>GST</th>
-            <th>Amount</th>
-        </tr>
 
-        <tr>
-            <td>1</td>
-            <td>Pen</td>
-            <td>2</td>
-            <td>10</td>
-            <td>5%</td>
-            <td>21</td>
-        </tr>
+<div class="invoice">
 
-        <tr>
-            <td>2</td>
-            <td>Copy</td>
-            <td>3</td>
-            <td>40</td>
-            <td>5%</td>
-            <td>126</td>
-        </tr>
+    <!-- Header -->
+    <div class="top-header">
+        <span>Page No. 1 of 1</span>
+        <h3>Invoice</h3>
+        <span>Original Copy</span>
+    </div>
+
+    <!-- Company Details -->
+    <div class="company-section">
+
+        <div class="company-info">
+            <h2>Company Name (Shop Name)</h2>
+
+            <p><b>Address:</b> New Delhi, Delhi, 110058, India.</p>
+
+            <p>
+                <b>Mobile:</b> +91 XXXXXXXXXX |
+                <b>Email:</b> XXXXXXXXXXXXXXXX
+            </p>
+
+            <p>
+                <b>GSTIN</b> - XXXXXXXXXXXXXX |
+                <b>PAN</b> - XXXXXXXXXX
+            </p>
+        </div>
+
+        <div class="logo">
+            Add Logo
+        </div>
+
+    </div>
+
+    <!-- Invoice Details -->
+    <div class="invoice-details">
+
+        <div class="detail-row">
+            <strong>Invoice</strong>
+            <span>: 0004/25-26</span>
+        </div>
+
+        <div class="detail-row">
+            <strong>Number</strong>
+            <span>: 0004/25-26</span>
+        </div>
+
+        <div class="detail-row">
+            <strong>Invoice Date</strong>
+            <span>: 13-07-2025</span>
+        </div>
+
+        <div class="detail-row">
+            <strong>Due date</strong>
+            <span>: 28-07-2025</span>
+        </div>
+
+        <div class="detail-row">
+            <strong>Place of Supply</strong>
+            <span>: 07 - Delhi</span>
+        </div>
+
+        <div class="detail-row">
+            <strong>Reverse Charge</strong>
+            <span>: No</span>
+        </div>
+
+    </div>
+
+    <!-- Billing Details -->
+    <div class="info-section billing">
+
+        <h3>Billing Details</h3>
+
+        <p><b>Customer Name:</b></p>
+        <p><b>Address:</b> New Delhi, Delhi, 110058, India.</p>
+
+        <p>
+            <b>Mobile:</b> +91 XXXXXXXXXX |
+            <b>Email:</b> Add email Id
+        </p>
+
+    </div>
+
+    <!-- Shipping Details -->
+    <div class="info-section shipping">
+
+        <h3>Shipping Details</h3>
+
+        <p><b>Customer Name:</b></p>
+        <p><b>Address:</b> New Delhi, Delhi, 110058, India.</p>
+
+        <p>
+            <b>Mobile:</b> +91 XXXXXXXXXX |
+            <b>Email:</b> Add email Id
+        </p>
+
+    </div>
+
+    <!-- Product Table -->
+    <table class="product-table">
+
+        <thead>
+            <tr>
+                <th>Sr.</th>
+                <th class="description">Product/Service Description</th>
+                <th>HSN/SAC</th>
+                <th>Qty</th>
+                <th>Unit</th>
+                <th>List Price</th>
+                <th>Disc.</th>
+                <th>Tax %</th>
+                <th>Amount (₹)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Product/Service 01</td>
+                <td>1234</td>
+                <td>1.00</td>
+                <td></td>
+                <td>200.00</td>
+                <td>1234</td>
+                <td>0.00</td>
+                <td>200.00</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Product/Service 02</td>
+                <td>4321</td>
+                <td>1.00</td>
+                <td></td>
+                <td>0.00</td>
+                <td>4321</td>
+                <td>0.00</td>
+                <td>0.00</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Product/Service 03</td>
+                <td>0987</td>
+                <td>1.00</td>
+                <td></td>
+                <td>0.00</td>
+                <td>0987</td>
+                <td>0.00</td>
+                <td>0.00</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Product/Service 04</td>
+                <td>4390</td>
+                <td>1.00</td>
+                <td></td>
+                <td>0.00</td>
+                <td>4390</td>
+                <td>0.00</td>
+                <td>0.00</td>
+            </tr>
+
+            <tr class="blank-row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+
     </table>
-</body>
 
+    <!-- Round Off -->
+    <div class="round-off">
+        <span>Rounded Off (+)</span>
+        <span>+ 0.00</span>
+    </div>
+
+    <!-- Total -->
+    <div class="total">
+        <span>Total</span>
+        <span>200.00</span>
+    </div>
+
+    <!-- Amount In Words -->
+    <div class="amount-words">
+        Amount in Words - Rs. Two Hundred Only
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+
+        <div class="terms">
+
+            <h3>Terms and Conditions</h3>
+
+            <p>1.</p>
+            <p>2.</p>
+            <p>3.</p>
+            <p>4.</p>
+            <p>5.</p>
+
+        </div>
+
+        <div class="payment">
+
+            <!-- Replace with your actual QR code image -->
+            <img
+                class="qr-code"
+                src="qr-code.png"
+                alt="QR Code"
+            >
+
+            <div class="upi">
+                <b>UPI Id:</b> Add UPI Id
+            </div>
+
+        </div>
+
+        <div class="pay-details">
+
+            <b>Pay For - Company Name (Shop Name)</b>
+
+            <div class="signature">
+                Signature
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
 </html>
