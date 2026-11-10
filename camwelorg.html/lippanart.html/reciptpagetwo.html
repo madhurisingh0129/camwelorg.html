@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Cell that spans two columns</h2>
+<p>To make a cell span more than one column, use the colspan attribute.</p><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +26,7 @@
             padding: 20px;
             display: flex;
             justify-content: space-between;
-            color: brown;
+            color: rgb(83, 69, 69);
         }
 
 
@@ -39,10 +52,14 @@
             padding: 70px;
         }
 
+        .main b {
+            color: rgb(137, 182, 75);
+        }
+
         /* table */
         table {
             width: 100%;
-            color: rgb(136, 136, 30);
+            color: rgb(87, 87, 28);
         }
 
         table,
@@ -52,9 +69,26 @@
             text-align: center;
         }
 
+        tr td {
+            border-right: 1px solid black;
+        }
+
         .tttt {
-            background-color: rgb(41, 207, 152);
-            color: aliceblue;
+            background-color: rgb(126, 179, 74);
+            color: beige;
+        }
+
+        .main-content {
+            color: rgb(75, 121, 6);
+            justify-content: space-between;
+            display: flex;
+            margin-bottom: 60px;
+            padding-bottom: 80px;
+
+        }
+
+        .main-content p {
+            font-size: 12px;
         }
     </style>
 </head>
@@ -92,14 +126,17 @@
         </div>
         <!-- middle-conrent -->
         <div class="apollo-box">
-            <img src="https://images.apollo247.in/image.svg?tr=q-80,w-100,c-at_max" alt="apollophamacy">
+            <img src="https://trifed.tribal.gov.in/sites/default/files/inline-images/Apollo-Pharmacy-2761.jpg"
+                alt="apollophamacy">
             <div class="box-ph">
                 <h2>Apollo Pharmacy</h2>
                 <p>(Apollo Pharmacies Limited)</p>
                 <p>Toll No:1860 500 0101</p>
                 <p>website:www.apollophamacy.in</p>
             </div>
-            <p>C.GSTIN:</p>
+            <div class="paragraph">
+                <p>C.GSTIN:</p>
+            </div>
             <div class="header">
                 <h2>INVOICE</h2>
             </div>
@@ -128,7 +165,7 @@
                 <span>10aafc56996z0</span>
             </div>
             <div>
-                FSSAI:
+                <b>FSSAI:</b>
             </div>
         </div>
 
@@ -136,88 +173,104 @@
     <!-- table-section -->
     <table>
         <tr class="tttt">
-            <th>Qty</th>
-            <th>item name</th>
+            <th>QTY</th>
+            <th>ITEM NAME</th>
             <th>HSN CODE</th>
             <th>MFRS</th>
-            <th>BATCH No.</th>
-            <th>EXPIRY</th>
+            <TH>BATCH NO.</TH>
+            <th>EXPRITY</th>
             <th>SCH</th>
             <th>MRP</th>
             <th>CGST%</th>
             <th>SGST%</th>
             <th>TAXABLE</th>
-            <th>TOTAL Amount</th>
+            <th>TOTAL AMOUNT</th>
         </tr>
         <tr>
-            <th>3</th>
-            <th>AMPLOX 250/250MG CAP 15'S</th>
-            <th>30049099</th>
-            <th>ZYDU</th>
-            <th>Da00093A</th>
-            <th>H</th>
-            <th>11.44</th>
-            <th>2.50</th>
-            <th>2.50</th>
-            <th>29.44</th>
-            <th>34.32</th>
-            <th>34.32</th>
+            <td>3</td>
+            <td>MEDICION</td>
+            <td>9084980</td>
+            <td>FHFH</td>
+            <td>H76767</td>
+            <td>2027-JUN</td>
+            <td>H</td>
+            <td>11.33</td>
+            <td>2.00</td>
+            <td>2.00</td>
+            <td>29.9</td>
+            <td>38.33</td>
         </tr>
         <tr>
-            <th>6</th>
-            <th>KOFLEFT-f ORANGE & GINEER LOZ</th>
-            <th>30049011</th>
-            <th>THE</th>
-            <th>986654776</th>
-            <th>2029-may</th>
-            <th>T (</th>
-            <th>none</th>
-            <th>4.46</th>
-            <th>2.50</th>
-            <th>2.50</th>
-            <th>37.95</th>
+            <td>6</td>
+            <td>madicion</td>
+            <td>6674374</td>
+            <td>the</td>
+            <td>878784978</td>
+            <td>2027-may</td>
+            <td>HON</td>
+            <td>9.77</td>
+            <td>2.00</td>
+            <td>2.50</td>
+            <td>34.43</td>
+            <td>69.98</td>
         </tr>
         <tr>
-            <th>1</th>
-            <th>AP INHALER 0.5ML</th>
-            <th>30049011</th>
-            <th>NIPH</th>
-            <th>API2602</th>
-            <th>2027-dec</th>
-            <th>T(</th>
-            <th>46.88</th>
-            <th>2.50</th>
-            <th>2.50</th>
-            <th>37.95</th>
-            <th>46.88</th>
+            <td>1</td>
+            <td>MEDICION</td>
+            <td>7876776</td>
+            <td>NIPH</td>
+            <td>API788</td>
+            <td>2027-jan</td>
+            <td>T0</td>
+            <td>45.66</td>
+            <td>2.00</td>
+            <td>2.00</td>
+            <td>37.87</td>
+            <td>50.00</td>
         </tr>
-        <tr style="height: 200px;">
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>Total:</th>
-        </tr>
-
-        <tr>
-            <th>Discount:</th>
+        <tr style="height: 150px;">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <th>Net Total:</th>
+            <td colspan="10"></td>            
+            <td>Total</td>
+            <td></td>
         </tr>
-
-
+        <tr>
+            
+            <td colspan="11">CIN:U52737767LIJ<b>Registered Office:</b>No.19 Bishop Garden,Raja Annamalapuram,chennai-6000028</td>           
+            <td >Discount</td>
+            <td></td>
+           
+        </tr>
+        <tr>
+            <td colspan="10"></td>            
+            <td>Net Total</td>
+            <td></td>
+        </tr>
     </table>
+
+    <div class="main-content">
+        <p>DPCO</p>
+        <P>No Tax payable on revers charge basis</P>
+        <h4>for Apollo Pharmacy pharmacist</h4>
+    </div>
+
+
 </body>
 
 </html>
+
+</html>
+
