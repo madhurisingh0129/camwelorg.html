@@ -7,6 +7,11 @@
     <title>recipt</title>
     <style>
         /* main-content */
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
 
         .main {
             border: 1px solid black;
@@ -19,30 +24,32 @@
 
         /* APOLLO */
         .apollo-box {
+            position: relative;
+            bottom: 22px;
             border: 1px solid green;
-            width: 400px;
-            height: 130px;
-            border-radius: 10px;
+            width: 300px;
+            height: 100px;
             display: flex;
             align-items: center;
-            padding: 10px;
-            margin-bottom: 30px;
-            gap: 15px;
+
+
         }
 
         .apollo-box img {
             width: 100px;
             height: 100px;
+
         }
 
         .box-ph {
-            padding: 70px;
+
+            color: rgb(137, 182, 75);
         }
+
 
         .main b {
             color: rgb(137, 182, 75);
         }
-
         /* table */
         table {
             width: 100%;
@@ -77,13 +84,40 @@
         .main-content p {
             font-size: 12px;
         }
+
+        /* .good {
+            width: 30px;
+            writing-mode: vertical-lr;
+            rotate: 180deg;
+             text-align: center;
+            border: 1px solid black;
+            background-color: rgb(69, 155, 69);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            position: relative;
+            bottom: 660px;
+            left: 40px;
+
+        }  */
+
+        .good p {
+            margin: 0;
+        }
+
+        .good h6 {
+            margin: 0;
+        }
     </style>
 </head>
 
 <body>
-    <div class="main-box">
-        <!-- left-content -->
+    <!-- left-content -->
+    <div class="section">
+        
         <div class="main">
+
+
             <div class="left-header">
                 <div>
                     <b>Bill No. :</b>
@@ -119,21 +153,15 @@
                 <div class="box-ph">
                     <h2>Apollo Pharmacy</h2>
                     <p>(Apollo Pharmacies Limited)</p>
-                    <p>Toll No:1860 500 0101</p>
+                    <p><strong>No:1860 500 0101</strong></p>
                     <p>website:www.apollophamacy.in</p>
                 </div>
-                <div class="paragraph">
-                    <p>C.GSTIN:</p>
-                </div>
-                <div class="header">
-                    <h2>INVOICE</h2>
-                </div>
-                <!-- left-box -->
-                <div class="good">
-                    <p>E & O.E.Goods once Sold cannot be taken or exchanged</p>
-                    <h6>INSULINS AND VACCINES WILL NOT BE TAKEN BACK</h6>
-                </div>
-
+            </div>
+            <div class="paragraph">
+                <p>C.GSTIN:</p>
+            </div>
+            <div class="header">
+                <h2>INVOICE</h2>
             </div>
             <!-- right-content -->
             <div class="right-header">
@@ -164,105 +192,110 @@
 
         </div>
         <!-- table-section -->
-        <table>
-            <tr class="tttt">
-                <th>QTY</th>
-                <th>ITEM NAME</th>
-                <th>HSN CODE</th>
-                <th>MFRS</th>
-                <TH>BATCH NO.</TH>
-                <th>EXPRITY</th>
-                <th>SCH</th>
-                <th>MRP</th>
-                <th>CGST%</th>
-                <th>SGST%</th>
-                <th>TAXABLE</th>
-                <th>TOTAL AMOUNT</th>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>MEDICION</td>
-                <td>9084980</td>
-                <td>FHFH</td>
-                <td>H76767</td>
-                <td>2027-JUN</td>
-                <td>H</td>
-                <td>11.33</td>
-                <td>2.00</td>
-                <td>2.00</td>
-                <td>29.9</td>
-                <td>38.33</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>madicion</td>
-                <td>6674374</td>
-                <td>the</td>
-                <td>878784978</td>
-                <td>2027-may</td>
-                <td>HON</td>
-                <td>9.77</td>
-                <td>2.00</td>
-                <td>2.50</td>
-                <td>34.43</td>
-                <td>69.98</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>MEDICION</td>
-                <td>7876776</td>
-                <td>NIPH</td>
-                <td>API788</td>
-                <td>2027-jan</td>
-                <td>T0</td>
-                <td>45.66</td>
-                <td>2.00</td>
-                <td>2.00</td>
-                <td>37.87</td>
-                <td>50.00</td>
-            </tr>
-            <tr style="height: 150px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="10"></td>
-                <td>Total</td>
-                <td></td>
-            </tr>
-            <tr>
+        <div class="table-content">
+            <table>
+                <tr class="tttt">
+                    <th>QTY</th>
+                    <th>ITEM NAME</th>
+                    <th>HSN CODE</th>
+                    <th>MFRS</th>
+                    <TH>BATCH NO.</TH>
+                    <th>EXPRITY</th>
+                    <th>SCH</th>
+                    <th>MRP</th>
+                    <th>CGST%</th>
+                    <th>SGST%</th>
+                    <th>TAXABLE</th>
+                    <th>TOTAL AMOUNT</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>MEDICION</td>
+                    <td>9084980</td>
+                    <td>FHFH</td>
+                    <td>H76767</td>
+                    <td>2027-JUN</td>
+                    <td>H</td>
+                    <td>11.33</td>
+                    <td>2.00</td>
+                    <td>2.00</td>
+                    <td>29.9</td>
+                    <td>38.33</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>madicion</td>
+                    <td>6674374</td>
+                    <td>the</td>
+                    <td>878784978</td>
+                    <td>2027-may</td>
+                    <td>HON</td>
+                    <td>9.77</td>
+                    <td>2.00</td>
+                    <td>2.50</td>
+                    <td>34.43</td>
+                    <td>69.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>MEDICION</td>
+                    <td>7876776</td>
+                    <td>NIPH</td>
+                    <td>API788</td>
+                    <td>2027-jan</td>
+                    <td>T0</td>
+                    <td>45.66</td>
+                    <td>2.00</td>
+                    <td>2.00</td>
+                    <td>37.87</td>
+                    <td>50.00</td>
+                </tr>
+                <tr style="height: 150px;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="10"></td>
+                    <td>Total</td>
+                    <td></td>
+                </tr>
+                <tr>
 
-                <td colspan="11">CIN:U52737767LIJ<b>Registered Office:</b>No.19 Bishop Garden,Raja
-                    Annamalapuram,chennai-6000028</td>
-                <td>Discount</td>
-                <td></td>
+                    <td colspan="11">CIN:U52737767LIJ<b>Registered Office:</b>No.19 Bishop Garden,Raja
+                        Annamalapuram,chennai-6000028</td>
+                    <td>Discount</td>
+                    <td></td>
 
-            </tr>
-            <tr>
-                <td colspan="10"></td>
-                <td>Net Total</td>
-                <td></td>
-            </tr>
-        </table>
+                </tr>
+                <tr>
+                    <td colspan="10"></td>
+                    <td>Net Total</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <div class="main-content">
+                <p>DPCO</p>
+                <P>No Tax payable on revers charge basis</P>
+                <h4>for Apollo Pharmacy pharmacist</h4>
+            </div>
+            </table>
+
+
+
+        </div>
 
     </div>
-
-    <div class="main-content">
-        <p>DPCO</p>
-        <P>No Tax payable on revers charge basis</P>
-        <h4>for Apollo Pharmacy pharmacist</h4>
-    </div>
-
 
 </body>
 

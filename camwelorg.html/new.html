@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apollo Pharmacy Invoice</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+.invoice {
+    width: 1200px;
+    min-height: 510px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 25px;
+    position: relative;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+/* Paper holes */
+.holes {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.holes span {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.right-holes {
+    left: auto;
+    right: 8px;
+}
+
+/* Main content */
+.invoice-content {
+    margin: 0 25px;
+}
+
+/* Top section */
+.top-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    min-height: 125px;
+    border: 1px solid #aaa;
+}
+
+.left-info {
+    padding: 12px;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.left-info p {
+    display: flex;
+}
+
+.left-info strong {
+    width: 95px;
+    font-weight: normal;
+}
+
+.center-info {
+    text-align: center;
+    border: 1px solid #aaa;
+    padding: 12px 5px;
+    color: #398c75;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.center-info p {
+    font-size: 11px;
+    margin: 5px;
+    color: #555;
+}
+
+.center-info h2 {
+    font-size: 23px;
+    margin-top: 8px;
+}
+
+.right-info {
+    padding: 10px;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.right-info p {
+    display: flex;
+}
+
+.right-info strong {
+    width: 75px;
+    font-weight: normal;
+}
+
+/* Invoice heading */
+.invoice-heading {
+    text-align: center;
+    color: #27836c;
+    font-size: 23px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+/* Medicine table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th {
+    background: #328e79;
+    color: white;
+    padding: 7px 4px;
+    border: 1px solid #ddd;
+    font-size: 11px;
+}
+
+td {
+    padding: 7px 5px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    height: 28px;
+    text-align: center;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+.medicine-area {
+    height: 205px;
+    vertical-align: top;
+}
+
+/* Total section */
+.total-section {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #999;
+    margin-top: 0;
+}
+
+.total-table {
+    width: 230px;
+}
+
+.total-table td {
+    height: 24px;
+    padding: 3px 8px;
+    text-align: right;
+    border: 1px solid #ccc;
+}
+
+.total-table td:first-child {
+    text-align: left;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid #999;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #367d6c;
+}
+
+.footer p {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    padding: 12px 0;
+}
+
+.footer-bottom p {
+    margin-bottom: 7px;
+}
+
+/* Left green strip */
+.vertical-strip {
+    position: absolute;
+    top: 20px;
+    bottom: 60px;
+    left: 22px;
+    width: 30px;
+    background: #398f78;
+    color: white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: 11px;
+    padding: 8px 4px;
+}
+
+.emergency {
+    position: absolute;
+    right: 7px;
+    top: 250px;
+    writing-mode: vertical-rl;
+    font-size: 10px;
+    color: #398f78;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .invoice {
+        margin: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="invoice">
+
+    <div class="holes">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="holes right-holes">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="vertical-strip">
+        E & O.E. Goods once sold cannot be taken back
+        MISUSE AND VACCINES WILL NOT BE TAKEN BACK
+    </div>
+
+    <div class="emergency">
+        EMERGENCY CALL : 1066
+    </div>
+
+    <div class="invoice-content">
+
+        <!-- TOP SECTION -->
+
+        <div class="top-section">
+
+            <div class="left-info">
+                <p><strong>Bill No.</strong> 268895100005196</p>
+                <p><strong>Date / Time</strong> 2026-11-05 10:40:00 AM</p>
+                <p><strong>Terminal No.</strong> L11</p>
+                <p><strong>Name</strong> HEMANTH</p>
+                <p><strong>Ref. No.</strong> 5323</p>
+                <p><strong>Dr.</strong> A K KAMILYA</p>
+                <p><strong>Cont. No.</strong> 9905174054</p>
+            </div>
+
+            <div class="center-info">
+                <div class="logo">✚ Apollo Pharmacy</div>
+                <p>(Apollo Pharmacies Limited)</p>
+                <h2>INVOICE</h2>
+                <p>Toll No: 1860 500 0101</p>
+                <p>Website: www.apollopharmacy.in</p>
+            </div>
+
+            <div class="right-info">
+                <p><strong>Branch</strong> BHAGWAT NAGAR</p>
+                <p><strong>Address</strong> NO 7A, A/12, BHAGWAT NAGAR</p>
+                <p><strong>Tel No</strong> 9147756374</p>
+                <p><strong>DL No</strong> RLP2062026/000068</p>
+                <p><strong>GSTIN</strong> 10AAHCA5895F1Z6</p>
+                <p><strong>FSSAI</strong></p>
+            </div>
+
+        </div>
+
+        <!-- MEDICINE TABLE -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>QTY.</th>
+                    <th>ITEM NAME</th>
+                    <th>HSN CODE</th>
+                    <th>MFRS</th>
+                    <th>BATCH NO.</th>
+                    <th>EXPIRY</th>
+                    <th>SCH</th>
+                    <th>MRP</th>
+                    <th>CGST%</th>
+                    <th>SGST%</th>
+                    <th>TAXABLE</th>
+                    <th>TOTAL AMOUNT</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>APFLOX 250/250MG CAP 15'S</td>
+                    <td>30049099</td>
+                    <td>ZIDU</td>
+                    <td>DNX0093A</td>
+                    <td>2027-Jun</td>
+                    <td>H</td>
+                    <td>11.44</td>
+                    <td>2.50</td>
+                    <td>2.50</td>
+                    <td>29.42</td>
+                    <td>34.22</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>NUFLET-H ORANGE & GINGER LOZ</td>
+                    <td>30049011</td>
+                    <td>THE</td>
+                    <td>94260006A</td>
+                    <td>2029-May</td>
+                    <td>WIN</td>
+                    <td>4.67</td>
+                    <td>2.50</td>
+                    <td>2.50</td>
+                    <td>25.55</td>
+                    <td>28.08</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>AP INHALER 0.5ML</td>
+                    <td>30049011</td>
+                    <td>NIPH</td>
+                    <td>APT2602</td>
+                    <td>2027-Dec</td>
+                    <td>T</td>
+                    <td>46.88</td>
+                    <td>2.50</td>
+                    <td>2.50</td>
+                    <td>37.75</td>
+                    <td>46.88</td>
+                </tr>
+
+                <tr>
+                    <td colspan="12" class="medicine-area"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- TOTAL -->
+
+        <div class="total-section">
+
+            <table class="total-table">
+                <tr>
+                    <td>Total</td>
+                    <td>107.62</td>
+                </tr>
+
+                <tr>
+                    <td>Discount</td>
+                    <td>11.84</td>
+                </tr>
+
+                <tr>
+                    <td>Net Total</td>
+                    <td>95.78</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <p>
+                CIN: U85200BR2010PLC011588
+                &nbsp;&nbsp;&nbsp;
+                Registered Office: No. 19 Bishop Gardens,
+                Raja Annamalai Puram, Chennai - 600028
+            </p>
+
+            <p>
+                Admin Office: For any queries / complaints:
+                Customer Care: 1800 102 0101
+            </p>
+
+            <p style="text-align:right;">
+                For Apollo Pharmacy-Pharmacist
+            </p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                MRP's in this bill are as per the revised GST rates.
+                GST benefit has been fully passed on to the customer.
+            </p>
+
+            <p>
+                Duplicate Copy of Invoice
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Page No : 1 of 1
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
