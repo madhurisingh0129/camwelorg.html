@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .Dashboard {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            min-width: 250px;
+            background: black;
+            padding: 45px 20px;
+        }
+
+        .profile {
+            background-color: rgb(22, 3, 3);
+            border: 1px solid rgb(87, 65, 65);
+            border-radius: 10px;
+            text-align: center;
+            padding: 24px 10px;
+            margin-bottom: 30px;
+            box-shadow: 3px rgb(243, 231, 231);
+        }
+
+        .profile h4 {
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .profile p {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .green-dot {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            background: #13c58b;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .profile small {
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* menu */
+        .menu {
+            list-style: none;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .menu li {
+            display: flex;
+            align-items: center;
+            border: 1 solid rgb(37, 192, 6);
+            gap: 15px;
+            padding: 12px 15px;
+            color: #69749c;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu li :hover {
+            color: blue;
+            background-color: white;
+            transform: translateX(5px);
+        }
+
+        .menu li>i:first-child {
+            font-size: 16px;
+        }
+
+        .menu li span {
+            flex: 6;
+        }
+
+        /* main-content */
+        .main-content {
+            flex: 1;
+            padding: 15px 20px;
+            background: linear-gradient(120deg,
+                    #b69c91,
+                    #65556d,
+                    #17121e);
+            min-width: 0;
+        }
+
+        .topbar {
+            background: linear-gradient(180deg,
+                    #bb9e91, #a29da5);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 5px;
+            padding: 22px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .topbar h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* card-box */
+        .grid-card {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 30px;
+        }
+
+        .card {
+            min-height: 140px;
+            display: flex;
+            border: 1px solid white;
+            border-radius: 05px;
+            background: linear-gradient(120deg,
+                    rgba(202, 177, 163, 0.45),
+                    rgba(25, 22, 21, 0.75));
+            padding: 25px 35px;
+        }
+
+        .card-icon {
+            width: 130px;
+            min-width: 130px;
+            height: 63px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 25px;
+        }
+
+        .card-icon i {
+            color: white;
+        }
+
+        .blue-icon i {
+            color: #3295e9;
+        }
+
+        .card-content {
+            padding-left: 50px;
+        }
+
+        .card-content h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+
+            .sidebar {
+                width: 200px;
+                min-width: 200px;
+                padding: 25px 12px;
+            }
+
+            .dashboard-grid {
+                gap: 15px;
+            }
+
+            .card {
+                padding: 20px 15px;
+            }
+
+            .card-icon {
+                width: 75px;
+                min-width: 75px;
+            }
+
+            .card-content {
+                padding-left: 20px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .sidebar {
+                width: 65px;
+                min-width: 65px;
+                padding: 20px 10px;
+            }
+
+            .profile {
+                display: none;
+            }
+
+            .menu li {
+                justify-content: center;
+            }
+
+            .menu li span,
+            .menu li .arrow {
+                display: none;
+            }
+
+            .main-content {
+                padding: 12px;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .topbar h2 {
+                font-size: 19px;
+            }
+
+            .breadcrumb {
+                font-size: 11px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="Dashboard">
+            <aside class="sidebar">
+                <div class="profile">
+                    <h4>Hi, Master User</h4>
+                    <p><span class="green-dot"></span> Last Login</p>
+                    <small>18/11/26 06:48 AM</small>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <i class="fa-solid fa-tachograph-digital"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users-rectangle"></i>
+                        <span>Member</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users"></i>
+                        <span>Board Plan</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <span>Donation Activity</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users-between-lines"></i>
+                        <span>User Tree</span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-wallet"></i>
+                            <span>E-Wallet</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <span>Earning & payout</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gift"></i>
+                        <span>Support Ticket</span>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-newspaper"></i>
+                        <span>News</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Setting</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-power-off"></i>
+                        <span>Logout</span>
+                    </li>
+                </ul>
+            </aside>
+            <main class="main-content">
+
+                <div class="topbar">
+                    <h2>Dashboard</h2>
+                    <div class="breadcrumb">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <span>Home</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <span>dashboard</span>
+                    </div>
+                </div>
+                <!-- card-box -->
+
+                <div class="grid-card">
+                    <!-- box-1 -->
+                    <div class="card">
+                        <div card-icon>
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="card-content">
+                            <h2>4332</h2>
+                            <p>Total User</p>
+                        </div>
+                    </div>
+
+                    <!-- box-2 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div card-content>
+                            <h2>3652</h2>
+                            <p>Total active User</p>
+                        </div>
+                    </div>
+
+                    <!-- box-3 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <div class="card-content">
+                            <h2>9312600.00</h2>
+                            <p>Earnings</p>
+                        </div>
+                    </div>
+
+                    <!-- box-4 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <div class="card-content">
+                            <h2>3036062.23</h2>
+                            <p>Member Income</p>
+                        </div>
+                    </div>
+
+                    <!-- box-5 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <div class="card-content">
+                            <h2>Today's Earning</h2>
+                        </div>
+                    </div>
+
+                    <!-- box-6 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <div class="blue-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <h2>3100.00</h2>
+                            <p>Council Fund</p>
+                        </div>
+                    </div>
+
+                    <!-- Box-7 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <div class="blue-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <h2>11900.00</h2>
+                            <p>Champion Fund</p>
+                        </div>
+                    </div>
+
+                    <!-- box-8 -->
+                    <div class="card">
+                        <div class="card-icon">
+                            <div class="blue-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <h2>5950.00</h2>
+                            <p>Leader Fund</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+    </section>
+    <!-- main-section -->
+     <section>
+        <div class="main-section">
+            <div></div>
+        </div>
+     </section>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doughnut Chart</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #211e1c;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .chart-box {
+            width: 650px;
+            padding: 40px;
+            background: linear-gradient(120deg, #51433e, #080b0d);
+            border: 1px solid #444;
+            color: white;
+        }
+
+        h3 {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            width: 250px;
+            height: 250px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chart-box">
+
+        <h3>Total Business Activity</h3>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>
+<script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+
+            data: {
+                labels: ['Business', 'Payout'],
+
+                datasets: [{
+                    data: [90.5, 9.5],
+
+                    backgroundColor: [
+                        '#3568CE',
+                        '#E43D18'
+                    ],
+
+                    borderColor: '#ffffff',
+                    borderWidth: 1,
+
+                    hoverOffset: 5
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#222',
+                            usePointStyle: true
+                        }
+                    },
+
+                    title: {
+                        display: false
+                    },
+
+                    tooltip: {
+                        enabled: true
+                    }
+                },
+
+                cutout: '40%'
+            }
+        });
+    </script>
